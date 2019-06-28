@@ -1,2 +1,36 @@
-# algorithm_data_structure
-Common algorithm and data structure implementation, as well as  solutions on LeetCode and the others
+# 算法与数据结构
+
+一些常见数据结构与算法的自行实现，使用 Java、python两种语言完成。算法题使用python作答
+
+## 数组
+
+数组最大的优点是快速查询，比如 `score[2]`。数组最好应用于“索引带有语意”的情况，但并非所有有语意的索引都适用于数组，比如身份证号。
+
+挑战在于如何使用数组处理那些“索引不带语意”的情况？索引没有语意，如何表示“没有元素”？如何添加元素？如何删除元素？......
+
+如何自行二次封装一个数组类呢？该实例中以`int`型作示例，没有模板化
+
+```
+class Array：
+    # 成员
+    
+    data[] # 存放数据
+    size # 使用量
+    
+    # 构造方法
+    
+    Array(capacity)
+    Array(Array_object)
+    Array(int... datas)
+    Array()
+    
+    # 方法
+    
+    add # 增
+    delete # 删
+    change # 改
+    index # 查
+```
+
+
+
