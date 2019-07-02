@@ -1,6 +1,6 @@
 public class Array {
 
-    private int size; // 数组使用量
+    private int size; // 数组使用量，指向第一个没有存储元素的位置
     private int data[]; // 存储数据
 
     /**
@@ -52,5 +52,39 @@ public class Array {
      */
     public int getCapacity(){
         return data.length;
+    }
+
+    /**
+     * 向数组末尾添加新的元素
+     * @param ele 追加元素
+     */
+    public void addToLast(int ele){
+
+        addToIndex(size, ele);
+    }
+    
+    public void addToFirst(int ele){
+
+        addToIndex(0, ele);
+    }
+
+    /**
+     * 向指定位置添加元素
+     * @param index 位置索引
+     * @param ele 加入的新元素
+     */
+    public void addToIndex(int index, int ele){
+
+        if(size == data.length)
+            throw new IllegalArgumentException("add to index failed! Array is full.");
+
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException("add to index failed! we want index >=0 and index <= size.");
+
+        for(int i = size; i > index; i--)
+            data[i] = data[i - 1];
+
+        data[index] = ele;
+        size++;
     }
 }
