@@ -62,7 +62,11 @@ public class Array {
 
         addToIndex(size, ele);
     }
-    
+
+    /**
+     * 向数组首位添加元素
+     * @param ele 新首位元素
+     */
     public void addToFirst(int ele){
 
         addToIndex(0, ele);
@@ -86,5 +90,43 @@ public class Array {
 
         data[index] = ele;
         size++;
+    }
+
+    /**
+     * 返回给定索引处的值
+     * @param index 给定的索引
+     * @return
+     */
+    public int get(int index){
+
+        if(index < 0 || index > size - 1)
+            throw new IllegalArgumentException("Get failed! Make sure index is legal.");
+
+        return data[index];
+    }
+
+    /**
+     * 将给定索引处的值替换为ele
+     * @param index
+     * @param ele
+     */
+    public void set(int index, int ele){
+        if(index < 0 || index > size - 1)
+            throw new IllegalArgumentException("Get failed! Make sure index is legal.");
+        data[index] = ele;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder str = new StringBuilder();
+        str.append(String.format("Array size:%d, capacity:%d\n", size, data.length));
+        str.append("[");
+        for (int i = 0; i < size; i++){
+            str.append(data[i]);
+            if(i != size - 1)
+                str.append(", ");
+        }
+        str.append("]");
+        return str.toString();
     }
 }

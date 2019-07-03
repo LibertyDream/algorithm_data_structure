@@ -8,28 +8,38 @@
 
 挑战在于如何使用数组处理那些“索引不带语意”的情况？索引没有语意，如何表示“没有元素”？如何添加元素？如何删除元素？......
 
-如何自行二次封装一个数组类呢？该实例中以`int`型作示例，没有模板化
+如何自行二次封装一个数组类呢？该实例中以`int`型作示例，没有模板化。
+
+![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-03_array_structure.png)
 
 ```
 class Array：
     # 成员
     
-    data[] # 存放数据
-    size # 使用量
+    data[]  # 存放数据
+    size  # 使用量，默认指向第一个没有存放元素的位置
     
     # 构造方法
     
-    Array(capacity)
-    Array(Array_object)
-    Array(int... datas)
+    Array(capacity)  # 给定数组容量的构造方法
+    Array(Array_object)  # 用数组对象初始化数组
+    Array(int... datas)  # 输入序列进行初始化
     Array()
     
     # 方法
     
-    add # 增
-    delete # 删
-    change # 改
-    index # 查
+   		# 增
+   	addToLast(ele)  # 添加新元素至末尾
+   	addToFirst(ele)  # 添加新元素至首位
+   	addToindex(index, ele)  # 添加新元素至指定索引
+   	
+    delete  # 删
+    
+    	# 改
+    set(index, ele)
+    
+    	# 查
+    get(index)
 ```
 
 
