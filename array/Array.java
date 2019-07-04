@@ -17,8 +17,10 @@ public class Array {
      * @param datas 存储数
      */
     public Array(int... datas){
-        data = datas;
-        size = data.length;
+        data = new int[2 * datas.length];
+        size = datas.length;
+        for(int i = 0; i < size; i++)
+            data[i] = datas[i];
     }
 
     /**
@@ -26,8 +28,11 @@ public class Array {
      * @param a_array 被传入的数组对象
      */
     public Array(Array a_array){
-        data = a_array.data;
-        size = data.length;
+        data = new int[2 * a_array.size];
+        size = a_array.size;
+        for (int i = 0; i < size; i++){
+            data[i] = a_array.data[i];
+        }
     }
 
     /**
@@ -94,8 +99,8 @@ public class Array {
 
     /**
      * 返回给定索引处的值
-     * @param index 给定的索引
-     * @return
+     * @param index 索引位置
+     * @return 存储值
      */
     public int get(int index){
 
@@ -106,9 +111,120 @@ public class Array {
     }
 
     /**
-     * 将给定索引处的值替换为ele
-     * @param index
-     * @param ele
+     * 判定数组是否包含给定值
+     * @param ele 给定值
+     * @return 判断结果，true or false
+     */
+    public boolean contain(int ele){
+        for(int i = 0; i < size; i++){
+            if(ele == data[i])
+                return true;
+        }
+        return false;
+    }
+
+    /**
+     * 找到给定元素的位置，并返回索引，否则返回-1
+     * @param ele 待查找值
+     * @return 元素索引
+     */
+    public int find(int ele){
+        int res = -1;
+
+        for(int i = 0; i < size; i++){
+            if(ele == data[i]){
+                res = i;
+                break;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * 以数组形式返回所有和给定元素值相等的值的索引，否则返回null
+     * @param ele 待查找元素
+     * @return 索引数组
+     */
+    public int[] findAll(int ele){
+
+        Array temp = new Array();
+
+        for(int i = 0; i < size; i++){
+            if(ele == data[i])
+                temp.addToFirst(i);
+        }
+
+        if(temp.size != 0) {
+            int[] res = new int[temp.size];
+            for(int i = 0; i < temp.size; i++){
+                res[i] = temp.data[i];
+            }
+            return res;
+        }
+        return null;
+    }
+
+    /**
+     * 删除第一个与给定值相等的元素
+     * @param ele 待删除值
+     */
+    public void removeEle(int ele){
+        int index = find(ele);
+        if(index != -1)
+            removeByIndex(index);
+    }
+
+    /**
+     * 删除所有和给定元素相等的值
+     * @param ele 待删除值
+     */
+    public void removeAllEle(int ele){
+        int[] index = findAll(ele);
+        if(index != null)
+            for(int i = 0; i < index.length; i++)
+                removeByIndex(index[i]);
+    }
+
+    /**
+     * 删除头元素，并返回其值
+     * @return
+     */
+    public int removeFirst(){
+        return removeByIndex(0);
+    }
+
+    /**
+     * 删除末位元素，并返回其值
+     * @return
+     */
+    public int removeLast(){
+        return removeByIndex(size - 1);
+    }
+
+    /**
+     * 删除给定位置的元素并返回元素值
+     * @param index 位置索引
+     * @return 元素值
+     */
+    public int removeByIndex(int index){
+        if(index < 0 || index > size - 1)
+            throw new IllegalArgumentException("remove failed! Index is illegal");
+
+        int res = data[index];
+
+        for(int i = index; i < size - 1; i++){
+            data[i] = data[i + 1];
+        }
+
+        size--;
+        return res;
+    }
+
+    /**
+     * 将给定索引处的值设置为给定值
+     * @param index 索引位置
+     * @param ele 赋值内容
      */
     public void set(int index, int ele){
         if(index < 0 || index > size - 1)

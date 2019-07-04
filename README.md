@@ -33,13 +33,22 @@ class Array：
    	addToFirst(ele)  # 添加新元素至首位
    	addToindex(index, ele)  # 添加新元素至指定索引
    	
-    delete  # 删
+   		# 删
+   	removeByIndex(index)
+   	removeEle(ele)
+   	removeAllEle(ele)
+   	removeFirst()
+   	removeLast()
     
     	# 改
     set(index, ele)
     
     	# 查
     get(index)
+    contain(ele)
+    find(ele)
+    findAll(ele)
+    
 ```
 
 
