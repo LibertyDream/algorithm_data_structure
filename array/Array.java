@@ -1,14 +1,16 @@
-public class Array {
+import java.util.Objects;
+
+public class Array<T> {
 
     private int size; // 数组使用量，指向第一个没有存储元素的位置
-    private int data[]; // 存储数据
+    private T data[]; // 存储数据
 
     /**
      * 指定容量的构造方法
      * @param capacity 数组容量
      */
     public Array(int capacity){
-        data = new int[capacity];
+        data = (T[])new Object[capacity]; // Java 1.8 不支持 new T[]
         size = 0;
     }
 
@@ -16,8 +18,8 @@ public class Array {
      * 变长参数构造Array
      * @param datas 存储数
      */
-    public Array(int... datas){
-        data = new int[2 * datas.length];
+    public Array(T... datas){
+        data = (T[])new Object[2 * datas.length];
         size = datas.length;
         for(int i = 0; i < size; i++)
             data[i] = datas[i];
@@ -27,8 +29,8 @@ public class Array {
      * 使用Array对象初始化Array对象
      * @param a_array 被传入的数组对象
      */
-    public Array(Array a_array){
-        data = new int[2 * a_array.size];
+    public Array(Array<T> a_array){
+        data = (T[])new Object[2 * a_array.size];
         size = a_array.size;
         for (int i = 0; i < size; i++){
             data[i] = a_array.data[i];
@@ -63,7 +65,7 @@ public class Array {
      * 向数组末尾添加新的元素
      * @param ele 追加元素
      */
-    public void addToLast(int ele){
+    public void addToLast(T ele){
 
         addToIndex(size, ele);
     }
@@ -72,7 +74,7 @@ public class Array {
      * 向数组首位添加元素
      * @param ele 新首位元素
      */
-    public void addToFirst(int ele){
+    public void addToFirst(T ele){
 
         addToIndex(0, ele);
     }
@@ -82,7 +84,7 @@ public class Array {
      * @param index 位置索引
      * @param ele 加入的新元素
      */
-    public void addToIndex(int index, int ele){
+    public void addToIndex(int index, T ele){
 
         if(size == data.length)
             throw new IllegalArgumentException("add to index failed! Array is full.");
@@ -102,7 +104,7 @@ public class Array {
      * @param index 索引位置
      * @return 存储值
      */
-    public int get(int index){
+    public T get(int index){
 
         if(index < 0 || index > size - 1)
             throw new IllegalArgumentException("Get failed! Make sure index is legal.");
@@ -115,9 +117,9 @@ public class Array {
      * @param ele 给定值
      * @return 判断结果，true or false
      */
-    public boolean contain(int ele){
+    public boolean contain(T ele){
         for(int i = 0; i < size; i++){
-            if(ele == data[i])
+            if(data[i].equals(ele))  // 泛型需要值比较，不是==的索引比较
                 return true;
         }
         return false;
@@ -128,11 +130,11 @@ public class Array {
      * @param ele 待查找值
      * @return 元素索引
      */
-    public int find(int ele){
+    public int find(T ele){
         int res = -1;
 
         for(int i = 0; i < size; i++){
-            if(ele == data[i]){
+            if(ele.equals(data[i])){
                 res = i;
                 break;
             }
@@ -146,13 +148,14 @@ public class Array {
      * @param ele 待查找元素
      * @return 索引数组
      */
-    public int[] findAll(int ele){
+    public int[] findAll(T ele){
 
-        Array temp = new Array();
+        Array<Integer> temp = new Array<>();
 
         for(int i = 0; i < size; i++){
-            if(ele == data[i])
+            if(data[i].equals(ele)) {
                 temp.addToFirst(i);
+            }
         }
 
         if(temp.size != 0) {
@@ -169,7 +172,7 @@ public class Array {
      * 删除第一个与给定值相等的元素
      * @param ele 待删除值
      */
-    public void removeEle(int ele){
+    public void removeEle(T ele){
         int index = find(ele);
         if(index != -1)
             removeByIndex(index);
@@ -179,7 +182,7 @@ public class Array {
      * 删除所有和给定元素相等的值
      * @param ele 待删除值
      */
-    public void removeAllEle(int ele){
+    public void removeAllEle(T ele){
         int[] index = findAll(ele);
         if(index != null)
             for(int i = 0; i < index.length; i++)
@@ -190,7 +193,7 @@ public class Array {
      * 删除头元素，并返回其值
      * @return
      */
-    public int removeFirst(){
+    public T removeFirst(){
         return removeByIndex(0);
     }
 
@@ -198,7 +201,7 @@ public class Array {
      * 删除末位元素，并返回其值
      * @return
      */
-    public int removeLast(){
+    public T removeLast(){
         return removeByIndex(size - 1);
     }
 
@@ -207,17 +210,18 @@ public class Array {
      * @param index 位置索引
      * @return 元素值
      */
-    public int removeByIndex(int index){
+    public T removeByIndex(int index){
         if(index < 0 || index > size - 1)
             throw new IllegalArgumentException("remove failed! Index is illegal");
 
-        int res = data[index];
+        T res = data[index];
 
         for(int i = index; i < size - 1; i++){
             data[i] = data[i + 1];
         }
 
         size--;
+        data[size] = null; // loitering objects 游荡对象，并非必须有的语句，不是内存泄漏
         return res;
     }
 
@@ -226,7 +230,7 @@ public class Array {
      * @param index 索引位置
      * @param ele 赋值内容
      */
-    public void set(int index, int ele){
+    public void set(int index, T ele){
         if(index < 0 || index > size - 1)
             throw new IllegalArgumentException("Get failed! Make sure index is legal.");
         data[index] = ele;
