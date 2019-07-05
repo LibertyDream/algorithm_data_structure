@@ -8,12 +8,12 @@
 
 挑战在于如何使用数组处理那些“索引不带语意”的情况？索引没有语意，如何表示“没有元素”？如何添加元素？如何删除元素？......
 
-如何自行二次封装一个数组类呢？该实例已实现泛化、
+如何自行二次封装一个数组类呢？本实例是一个动态的泛化数组，
 
 ![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-03_array_structure.png)
 
 ```
-class Array：
+class Array<T>：
     # 成员
     
     data[]  # 存放数据
@@ -23,7 +23,7 @@ class Array：
     
     Array(capacity)  # 给定数组容量的构造方法
     Array(Array_object)  # 用数组对象初始化数组
-    Array(int... datas)  # 输入序列进行初始化
+    Array(T... datas)  # 输入序列进行初始化
     Array()
     
     # 方法

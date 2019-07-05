@@ -3,12 +3,13 @@ import java.util.Objects;
 public class Array<T> {
 
     private int size; // 数组使用量，指向第一个没有存储元素的位置
-    private T data[]; // 存储数据
+    private T[] data; // 存储数据
 
     /**
      * 指定容量的构造方法
      * @param capacity 数组容量
      */
+    @SuppressWarnings("unchecked")
     public Array(int capacity){
         data = (T[])new Object[capacity]; // Java 1.8 不支持 new T[]
         size = 0;
@@ -18,6 +19,7 @@ public class Array<T> {
      * 变长参数构造Array
      * @param datas 存储数
      */
+    @SuppressWarnings("unchecked")
     public Array(T... datas){
         data = (T[])new Object[2 * datas.length];
         size = datas.length;
@@ -29,6 +31,7 @@ public class Array<T> {
      * 使用Array对象初始化Array对象
      * @param a_array 被传入的数组对象
      */
+    @SuppressWarnings("unchecked")
     public Array(Array<T> a_array){
         data = (T[])new Object[2 * a_array.size];
         size = a_array.size;
@@ -86,17 +89,25 @@ public class Array<T> {
      */
     public void addToIndex(int index, T ele){
 
-        if(size == data.length)
-            throw new IllegalArgumentException("add to index failed! Array is full.");
-
         if(index < 0 || index > size)
             throw new IllegalArgumentException("add to index failed! we want index >=0 and index <= size.");
+
+        if(size == data.length)
+            resize(2 * data.length);
 
         for(int i = size; i > index; i--)
             data[i] = data[i - 1];
 
         data[index] = ele;
         size++;
+    }
+
+    private void resize(int newcapacity) {
+        T[] newData = (T[])new Object[newcapacity];
+        for(int i = 0; i < size; i++){
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 
     /**
@@ -162,6 +173,7 @@ public class Array<T> {
             int[] res = new int[temp.size];
             for(int i = 0; i < temp.size; i++){
                 res[i] = temp.data[i];
+//                res[i] = temp.get(i);
             }
             return res;
         }
@@ -222,6 +234,9 @@ public class Array<T> {
 
         size--;
         data[size] = null; // loitering objects 游荡对象，并非必须有的语句，不是内存泄漏
+
+        if(size <= data.length / 2)
+            resize(data.length / 2);
         return res;
     }
 
