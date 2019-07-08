@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Array<T> {
 
     private int size; // 数组使用量，指向第一个没有存储元素的位置
@@ -172,8 +170,7 @@ public class Array<T> {
         if(temp.size != 0) {
             int[] res = new int[temp.size];
             for(int i = 0; i < temp.size; i++){
-                res[i] = temp.data[i];
-//                res[i] = temp.get(i);
+                res[i] = temp.get(i);
             }
             return res;
         }
@@ -233,9 +230,9 @@ public class Array<T> {
         }
 
         size--;
-        data[size] = null; // loitering objects 游荡对象，并非必须有的语句，不是内存泄漏
+        data[size] = null;  // loitering objects 游荡对象，并非必须有的语句，不是内存泄漏
 
-        if(size <= data.length / 2)
+        if(size < data.length / 4)  // 防止复杂度震荡
             resize(data.length / 2);
         return res;
     }
