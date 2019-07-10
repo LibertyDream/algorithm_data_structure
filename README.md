@@ -2,6 +2,10 @@
 
 一些常见数据结构与算法的自行实现，数据结构有 Java 1.8、Python 3.6 两种实现。算法题使用 Python 3.6 作答
 
+| 数据结构 | JAVA                                   | Python                               |
+| :------- | -------------------------------------- | ------------------------------------ |
+| 数组     | [Array](./datastruct/array/Array.java) | [Array](./datastruct/array/Array.py) |
+
 ## 数组
 
 数组最大的优点是快速查询，比如 `score[2]`。数组最好应用于“索引带有语意”的情况，但并非所有有语意的索引都适用于数组，比如身份证号。
@@ -30,22 +34,22 @@ class Array<T>：
     
     resize()  # 扩容  O(n) 
     
-   		# 增
-   	addToLast(ele)  # 添加新元素至末尾  O(n)  均摊复杂度O(1)
-   	addToFirst(ele)  # 添加新元素至首位  O(n)
-   	addToindex(index, ele)  # 添加新元素至指定索引  O(n)
+   	    # 增
+    addToLast(ele)  # 添加新元素至末尾  O(n)  均摊复杂度O(1)
+    addToFirst(ele)  # 添加新元素至首位  O(n)
+    addToindex(index, ele)  # 添加新元素至指定索引  O(n)
    	
-   		# 删
-   	removeByIndex(index)  # 删除指定位置处的元素  O(n)
-   	removeEle(ele)  # 删除第一个与ele相等的元素  O(n)
-   	removeAllEle(ele)  # 删除所有与ele相等的元素  O(n)
-   	removeFirst()  # 删除头元素  O(n)
-   	removeLast()  # 删除末位元素  O(n) 均摊复杂度O(1)
+   	    # 删
+    removeByIndex(index)  # 删除指定位置处的元素  O(n)
+    removeEle(ele)  # 删除第一个与ele相等的元素  O(n)
+    removeAllEle(ele)  # 删除所有与ele相等的元素  O(n)
+    removeFirst()  # 删除头元素  O(n)
+    removeLast()  # 删除末位元素  O(n) 均摊复杂度O(1)
     
-    	# 改
+        # 改
     set(index, ele)  # 将index处的值设为ele  O(1)
     
-    	# 查
+        # 查
     get(index)  # 返回index处的元素值  O(1)
     contain(ele)  # 判断是否含有ele  O(n)
     find(ele)  # 返回第一处与ele相等的元素位置索引，否则返回-1  O(n)
