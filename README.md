@@ -34,12 +34,12 @@ class Array<T>：
     
     resize()  # 扩容  O(n) 
     
-   	    # 增
+        # 增
     addToLast(ele)  # 添加新元素至末尾  O(n)  均摊复杂度O(1)
     addToFirst(ele)  # 添加新元素至首位  O(n)
     addToindex(index, ele)  # 添加新元素至指定索引  O(n)
    	
-   	    # 删
+        # 删
     removeByIndex(index)  # 删除指定位置处的元素  O(n)
     removeEle(ele)  # 删除第一个与ele相等的元素  O(n)
     removeAllEle(ele)  # 删除所有与ele相等的元素  O(n)
@@ -54,8 +54,28 @@ class Array<T>：
     contain(ele)  # 判断是否含有ele  O(n)
     find(ele)  # 返回第一处与ele相等的元素位置索引，否则返回-1  O(n)
     findAll(ele)  # 返回所有与ele相等的元素位置索引，否则返回null  O(n)
+    isEmpty()  # 数组是否为空
     
 ```
 
+## 栈和队列
 
+栈也是线性结构，特点是只能从同一端添加和删除元素，这一端通常称为栈顶。加入元素的过程称为入栈，取出元素的过程称为出栈。
+
+**栈是一种后进先出（LIFO, Last In First Out）的数据结构**
+
+栈在计算机世界里十分常见，比如撤销操作，程序调用时的系统栈。
+
+![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-12-stack.png)
+
+```
+Interface Stack<E>
+    void push<E>  # 入栈
+    E pop()  # 出栈
+    E peek()  # 查看栈顶元素
+    int getSize()  # 栈内元素数量
+    boolean isEmpty()  # 栈是否为空
+```
+
+对于用户而言需要的接口并不复杂，但是栈的底层实现可以多种多样，本实例中通过规定接口，完成了基于自建数组 Array 的 ArrayStack。
 

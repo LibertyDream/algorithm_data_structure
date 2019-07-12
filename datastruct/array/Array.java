@@ -121,6 +121,14 @@ public class Array<T> {
         return data[index];
     }
 
+    public T getFirst(){
+        return get(0);
+    }
+
+    public T getLast(){
+        return get(size - 1);
+    }
+
     /**
      * 判定数组是否包含给定值
      * @param ele 给定值
@@ -246,6 +254,10 @@ public class Array<T> {
         if(index < 0 || index > size - 1)
             throw new IllegalArgumentException("Get failed! Make sure index is legal.");
         data[index] = ele;
+    }
+
+    public boolean isEmpty(){
+        return size == 0;
     }
 
     @Override

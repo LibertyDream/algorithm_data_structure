@@ -1,19 +1,19 @@
 class Array(object):
 
-    # 通过条件语句实现重载
+    #  通过条件语句实现重载
     def __init__(self, *a_array:int):
 
-        # Array（capacity）
+        #  Array（capacity）
         if len(a_array) == 1:
             self.__data = [None]*a_array[0]
             self.__size = 0
 
-        # Array()
+        #  Array()
         elif len(a_array) == 0:
             self.__data = [None] * 10
             self.__size = 0
 
-        # Array(1,2,3...)
+        #  Array(1,2,3...)
         else:
             self.__data = [None] * 2 * len(a_array)
             for x in range(len(a_array)):
@@ -29,7 +29,7 @@ class Array(object):
         return self.__size
 
 
-    # 设置数组打印格式
+    #  设置数组打印格式
     def __str__(self):
         build_str = 'Array size: %d, capacity：%d\n' % (self.__size, len(self.__data))
         build_str += '['
@@ -71,7 +71,7 @@ class Array(object):
     #  数组扩容
     def __resize(self, new_capacity:int):
         new_data = [None] * new_capacity
-        for i in range(len(self.__data)):
+        for i in range(self.__size):
             new_data[i] = self.__data[i]
         self.__data = new_data
 
@@ -115,7 +115,7 @@ class Array(object):
             return None
         return res
 
-    # 删除指定位置元素
+    #  删除指定位置元素
     def remove_by_index(self, index:int):
 
         if index < 0 or index > self.__size:
@@ -133,6 +133,23 @@ class Array(object):
     def remove_first(self):
         self.remove_by_index(0)
 
-    # 删除末尾元素
+    #  删除末尾元素
     def remove_last(self):
         self.remove_by_index(self.__size-1)
+
+    #  删除第一个和给定值相等的元素
+    def remove_ele(self, ele):
+
+        index = self.find(ele)
+        self.remove_by_index(index)
+
+    #  删除所有和给定值相等的元素
+    def remove_all_ele(self, ele):
+
+        lt = self.find_all(ele)
+        lt = lt[::-1]  #  索引倒序删除
+        for index in lt:
+            self.remove_by_index(index)
+
+    def is_empty(self):
+        return self.__size == 0
