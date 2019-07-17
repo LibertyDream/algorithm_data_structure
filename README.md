@@ -2,9 +2,11 @@
 
 一些常见数据结构与算法的自行实现，数据结构有 Java 1.8、Python 3.6 两种实现。算法题使用 Python 3.6 作答
 
-| 数据结构 | JAVA                                   | Python                               |
-| :------- | -------------------------------------- | ------------------------------------ |
-| 数组     | [Array](./datastruct/array/Array.java) | [Array](./datastruct/array/Array.py) |
+| 数据结构       | JAVA                                                         | Python                               |
+| :------------- | ------------------------------------------------------------ | ------------------------------------ |
+| [数组](##数组) | [Array](./datastruct/array/Array.java)                       | [Array](./datastruct/array/Array.py) |
+| [栈](##栈)     | [ArrayStack](./datastruct/stack/ArrayStack.java)             |                                      |
+| [队列](##队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java) |                                      |
 
 ## 数组
 
@@ -58,7 +60,7 @@ class Array<T>：
     
 ```
 
-## 栈和队列
+## 栈
 
 栈也是线性结构，特点是只能从同一端添加和删除元素，这一端通常称为栈顶。加入元素的过程称为入栈，取出元素的过程称为出栈。
 
@@ -78,4 +80,54 @@ Interface Stack<E>
 ```
 
 对于用户而言需要的接口并不复杂，但是栈的底层实现可以多种多样，本实例中通过规定接口，完成了基于自建数组 Array 的 ArrayStack。
+
+```
+ArrayStack<E>
+    void push(E)     O(1)  # 均摊
+    E pop()          O(1)  # 均摊
+    E peek()         O(1)
+    int getSize()    O(1)
+    boolean isEmpty  O(1)
+```
+
+## 队列
+
+队列是另外一种常见的线性结构，特点是只能从一端(队尾）添加元素，只能从另一端（队首）取出元素。
+
+![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-13_queue.png)
+
+队列是一种先进先出（FIFO, First In First Out)的数据结构，即先到先得。
+
+```
+Queue<E>
+    void enqueue(E)  # 入队
+    E dequeue()  # 出队
+    E getFront()  # 查看队首元素
+    int getSize()  # 查看队列大小
+    boolean isEmpty()  # 判断队列是否为空
+```
+
+用户对于队列的接口需求稳定而不关心底层实现，故本实例中通过规定接口，复用 Array 实现一个 ArrayQueue。
+
+```
+ArrayQueue<E>
+    void enqueue(E)    O(1)  # 均摊
+    E dequeue()        O(n)
+    E getFont()        O(1)
+    int getSize()      O(1)
+    boolean isEmpty    O(1)
+```
+
+可以看到ArrayQueue的出队操作耗费时间期望比较大，我们希望出队操作时间复杂度也是O(1)，所以有了循环队列
+
+![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-18_loopqueue.png)
+
+```
+LoopQueue<E>
+    void enqueue(E)    O(1)  # 均摊
+    E dequeue()        O(1)  # 均摊
+    E getFont()        O(1)
+    int getSize()      O(1)
+    boolean isEmpty    O(1)
+```
 
