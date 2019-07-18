@@ -2,11 +2,11 @@
 
 一些常见数据结构与算法的自行实现，数据结构有 Java 1.8、Python 3.6 两种实现。算法题使用 Python 3.6 作答
 
-| 数据结构       | JAVA                                                         | Python                               |
-| :------------- | ------------------------------------------------------------ | ------------------------------------ |
-| [数组](##数组) | [Array](./datastruct/array/Array.java)                       | [Array](./datastruct/array/Array.py) |
-| [栈](##栈)     | [ArrayStack](./datastruct/stack/ArrayStack.java)             |                                      |
-| [队列](##队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java) |                                      |
+| 数据结构        | JAVA                                                         | Python                                                       |
+| :-------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [数组](## 数组) | [Array](./datastruct/array/Array.java)                       | [Array](./datastruct/array/Array.py)                         |
+| [栈](## 栈)     | [ArrayStack](./datastruct/stack/ArrayStack.java)             | [ArrayStack](./datastruct/stack/ArrayStack.py)               |
+| [队列](## 队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java) | [ArrayQueue](./datastruct/queue/ArrayQueue.py),[LoopQueue](./datastruct/queue/LoopQueue.py) |
 
 ## 数组
 
