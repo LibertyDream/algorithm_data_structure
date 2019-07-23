@@ -2,11 +2,12 @@
 
 一些常见数据结构与算法的自行实现，数据结构有 Java 1.8、Python 3.6 两种实现。算法题使用 Python 3.6 作答
 
-| 数据结构        | JAVA                                                         | Python                                                       |
-| :-------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [数组](## 数组) | [Array](./datastruct/array/Array.java)                       | [Array](./datastruct/array/Array.py)                         |
-| [栈](## 栈)     | [ArrayStack](./datastruct/stack/ArrayStack.java)             | [ArrayStack](./datastruct/stack/ArrayStack.py)               |
-| [队列](## 队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java) | [ArrayQueue](./datastruct/queue/ArrayQueue.py),[LoopQueue](./datastruct/queue/LoopQueue.py) |
+| 数据结构                                                     | JAVA                                                         | Python                                                       |
+| :----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [数组](https://github.com/LibertyDream/algorithm_data_structure#数组) | [Array](./datastruct/array/Array.java)                       | [Array](./datastruct/array/Array.py)                         |
+| [栈](https://github.com/LibertyDream/algorithm_data_structure#栈) | [ArrayStack](./datastruct/stack/ArrayStack.java),[LinkedListStack](./datastruct/stack/LinkedListStack.java) | [ArrayStack](./datastruct/stack/ArrayStack.py)               |
+| [队列](https://github.com/LibertyDream/algorithm_data_structure#队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java),[LinkedListQueue](./datastruct/queue/LinkedListQueue.java) | [ArrayQueue](./datastruct/queue/ArrayQueue.py),[LoopQueue](./datastruct/queue/LoopQueue.py) |
+| [链表](https://github.com/LibertyDream/algorithm_data_structure#链表) | [LinkedList](./datastruct/linkedlist/LinkedList.java)        |                                                              |
 
 ## 数组
 
@@ -79,12 +80,19 @@ Interface Stack<E>
     boolean isEmpty()  # 栈是否为空
 ```
 
-对于用户而言需要的接口并不复杂，但是栈的底层实现可以多种多样，本实例中通过规定接口，完成了基于自建数组 Array 的 ArrayStack。
+对于用户而言需要的接口并不复杂，但是栈的底层实现可以多种多样，本实例中通过规定接口，完成了基于自建数组 Array 的 ArrayStack，和自建链表 LinkedList（虚拟头结点） 的 LinkedListStack。
 
 ```
 ArrayStack<E>
     void push(E)     O(1)  # 均摊
     E pop()          O(1)  # 均摊
+    E peek()         O(1)
+    int getSize()    O(1)
+    boolean isEmpty  O(1)
+    
+LinkedListStack<E>
+    void push(E)     O(1)
+    E pop()          O(1)
     E peek()         O(1)
     int getSize()    O(1)
     boolean isEmpty  O(1)
@@ -118,7 +126,7 @@ ArrayQueue<E>
     boolean isEmpty    O(1)
 ```
 
-可以看到ArrayQueue的出队操作耗费时间期望比较大，我们希望出队操作时间复杂度也是O(1)，所以有了循环队列
+可以看到 ArrayQueue 的出队操作耗费时间期望比较大，我们希望出队操作时间复杂度也是O(1)，所以有了循环队列
 
 ![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-18_loopqueue.png)
 
@@ -129,5 +137,70 @@ LoopQueue<E>
     E getFont()        O(1)
     int getSize()      O(1)
     boolean isEmpty    O(1)
+```
+
+_有了链表基础后，设计实现了基于带有头尾双指针链表的队列 LinkedListQueue_
+
+```
+LinkedListQueue<E>
+    void enqueue(E)    O(1)
+    E dequeue()        O(1)
+    E getFont()        O(1)
+    int getSize()      O(1)
+    boolean isEmpty    O(1)
+```
+
+
+
+## 链表
+
+上述三种线性结构——动态数组、队列和栈底层都是依托静态数组实现的，动态扩容依靠的是 resize() 操作，并不能算是真正意义上的动态数据结构。
+
+链表算是实际意义上最简单的动态数据结构,不再需要考虑固定容量的问题，但也丧失了随机访问的能力。常见于引用（指针）和辅助其他数据结构的场景。
+
+![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-23_linked_list.png)
+
+![]( https://raw.githubusercontent.com/LibertyDream/diy_img_host/master/img/2019-07-23_linked_list_1.png)
+
+链表首先要定义“节点”：
+
+```
+class Node{
+    E e;
+    Node next;
+    
+    Node(e, next)
+    Node(e)
+    Node()
+}
+```
+
+本实例中的链表结构如下：
+
+```
+class LinkedList<E>
+
+    dummyHead  # 虚拟头结点
+    size
+    
+    LinkedList()
+    getSize()
+    isEmpty()
+    
+    # 增
+    addToIndex(index, e)  O(n)
+    addToFirst(e)  O(1)
+    addToLast(e)  O(n)
+    
+    # 删
+    remove(index)  O(n)
+    removeFirst()  O(1)
+    removeLast()  O(n)
+    
+    # 改
+    set(index, e)  O(n)
+    
+    # 查
+    contain(e)  O(n)
 ```
 
