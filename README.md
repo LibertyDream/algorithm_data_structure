@@ -8,7 +8,7 @@
 | [栈](https://github.com/LibertyDream/algorithm_data_structure#栈) | [ArrayStack](./datastruct/stack/ArrayStack.java),[LinkedListStack](./datastruct/stack/LinkedListStack.java) | [ArrayStack](./datastruct/stack/ArrayStack.py),[LinkedListStack](./datastruct/stack/LinkedListStack.py) |
 | [队列](https://github.com/LibertyDream/algorithm_data_structure#队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java),[LinkedListQueue](./datastruct/queue/LinkedListQueue.java) | [ArrayQueue](./datastruct/queue/ArrayQueue.py),[LoopQueue](./datastruct/queue/LoopQueue.py),[LinkedListQueue](./datastruct/queue/LinkedListQueue.py) |
 | [链表](https://github.com/LibertyDream/algorithm_data_structure#链表) | [LinkedList](./datastruct/linkedlist/LinkedList.java)        | [LinkedList](./datastruct/linkedlist/LinkedList.py)          |
-| [二分搜索树](https://github.com/LibertyDream/algorithm_data_structure#二分搜索树) | [BST](./datastruct/BST/BST.java)                             |                                                              |
+| [二分搜索树](https://github.com/LibertyDream/algorithm_data_structure#二分搜索树) | [BST](./datastruct/BST/BST.java)                             | [BST](./datastruct/BST/BST.py)                               |
 
 ## 数组
 
