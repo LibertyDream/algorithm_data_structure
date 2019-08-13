@@ -9,6 +9,7 @@
 | [队列](https://github.com/LibertyDream/algorithm_data_structure#队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java),[LinkedListQueue](./datastruct/queue/LinkedListQueue.java) | [ArrayQueue](./datastruct/queue/ArrayQueue.py),[LoopQueue](./datastruct/queue/LoopQueue.py),[LinkedListQueue](./datastruct/queue/LinkedListQueue.py) |
 | [链表](https://github.com/LibertyDream/algorithm_data_structure#链表) | [LinkedList](./datastruct/linkedlist/LinkedList.java)        | [LinkedList](./datastruct/linkedlist/LinkedList.py)          |
 | [二分搜索树](https://github.com/LibertyDream/algorithm_data_structure#二分搜索树) | [BST](./datastruct/BST/BST.java)                             | [BST](./datastruct/BST/BST.py)                               |
+| [集合](https://github.com/LibertyDream/algorithm_data_structure#集合) | [BSTSet](./datastruct/set/BSTSet.java),[LinkedListSet](./datastruct/set/LinkedListSet.java) |                                                              |
 
 ## 数组
 
@@ -197,6 +198,7 @@ class LinkedList<E>
     remove(index)  O(n)
     removeFirst()  O(1)
     removeLast()  O(n)
+    removeEle(E)  O(n)
     
     # 改
     set(index, e)  O(n)
@@ -285,3 +287,31 @@ class BST<E extends Comparable<E>>{
     levelOrder()
 }
 ```
+
+## 集合
+
+计算机里的集合和数学里集合论的集合相同，最重要的特点是无序性、特异性。集合和栈类似，都是一个高层封装的接口类的数据结构，用户调用接口进行使用，而具体的数据结构底层实现方式是多种多样的。
+
+定义集合接口如下：
+
+```
+Set<E>{
+    
+    #  添加元素E
+    add(E)
+    
+    #  删除元素E
+    remove(E)
+    
+    #  是否包含元素E
+    contains(E)
+    
+    #  集合大小
+    getSize()
+    
+    #  集合是否为空
+    isEmpty()
+}
+```
+
+本实例中分别构建了基于自己实现的二分搜索树 BST（不保留重复元素）的集合 BSTSet，基于自己实现的链表 LinkedList 的集合 LinkedListSet
