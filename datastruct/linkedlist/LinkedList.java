@@ -178,6 +178,7 @@ public class LinkedList<E> {
                 Node del = pre.next;
                 pre.next = del.next;
                 del.next = null;
+                size--;
             }else{
                 pre = pre.next;
             }

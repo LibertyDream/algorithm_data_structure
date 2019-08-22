@@ -9,7 +9,7 @@
 | [队列](https://github.com/LibertyDream/algorithm_data_structure#队列) | [ArrayQueue](./datastruct/queue/ArrayQueue.java),[LoopQueue](./datastruct/queue/LoopQueue.java),[LinkedListQueue](./datastruct/queue/LinkedListQueue.java) | [ArrayQueue](./datastruct/queue/ArrayQueue.py),[LoopQueue](./datastruct/queue/LoopQueue.py),[LinkedListQueue](./datastruct/queue/LinkedListQueue.py) |
 | [链表](https://github.com/LibertyDream/algorithm_data_structure#链表) | [LinkedList](./datastruct/linkedlist/LinkedList.java)        | [LinkedList](./datastruct/linkedlist/LinkedList.py)          |
 | [二分搜索树](https://github.com/LibertyDream/algorithm_data_structure#二分搜索树) | [BST](./datastruct/BST/BST.java)                             | [BST](./datastruct/BST/BST.py)                               |
-| [集合](https://github.com/LibertyDream/algorithm_data_structure#集合) | [BSTSet](./datastruct/set/BSTSet.java),[LinkedListSet](./datastruct/set/LinkedListSet.java) |                                                              |
+| [集合](https://github.com/LibertyDream/algorithm_data_structure#集合) | [BSTSet](./datastruct/set/BSTSet.java),[LinkedListSet](./datastruct/set/LinkedListSet.java) | [BSTSet](./datastruct/set/BSTSet.py),[LinkedListSet](./datastruct/set/LinkedListSet.py) |
 
 ## 数组
 
@@ -243,23 +243,25 @@ class BST<E extends Comparable<E>>{
     isEmpty()  # 判断树是否为空
     
     # 增
-    add()
+    add() O(logn)
         __addRecur()  # 递归实现
         __addNonRecur()  # 非递归实现
         
     # 查
-    contains(e)
+    contains(e)  O(logn)
         __containsRecur()
         __containsNonRecur()
-    min()  #  最小值
-    max()  #  最大值
+    min()  #  最小值  O(logn)
+    max()  #  最大值  O(logn)
     
     # 删
-    removeEle(e)  #  删除元素e
-    removeMin()  #  删除最小值
-    removeMax()  #  删除最大值
+    removeEle(e)  #  删除元素e  O(logn)
+    removeMin()  #  删除最小值  O(logn)
+    removeMax()  #  删除最大值  O(logn)
 }
 ```
+
+_注：上述算法时间复杂度是平均状态下，存在退化至 O(n) 的可能，更多内容参见 AVL 和红黑树部分_
 
 遍历树中元素历来是树结构绕不过去的话题，最自然的前序遍历，有排序功能的中序遍历（针对二分搜索树而言），后序遍历。除了这种先一头扎下去的深度优先遍历思路，还有一种一层一层递进的广度优先遍历，即层序遍历。
 
@@ -315,3 +317,16 @@ Set<E>{
 ```
 
 本实例中分别构建了基于自己实现的二分搜索树 BST（不保留重复元素）的集合 BSTSet，基于自己实现的链表 LinkedList 的集合 LinkedListSet
+
+```
+LinkedListSet:
+    add(E)   O(n)
+    remove(E)  O(n)
+    contains(E)  O(n)
+    
+BSTSet:
+    add(E)  O(logn)
+    remove(E)  O(logn)
+    contains(E)  O(logn)
+```
+
