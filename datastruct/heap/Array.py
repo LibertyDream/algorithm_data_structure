@@ -12,7 +12,6 @@ class Array(object):
         elif len(a_array) == 1:            
             self.__data = [None]*a_array[0]
             self.__size = 0
-
         #  Array(1,2,3...)
         else:
             self.__data = [None] * 2 * len(a_array)
