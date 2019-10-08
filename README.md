@@ -13,4 +13,5 @@
 | [映射](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/map) | [LinkedListMap](./datastruct/map/LinkedListMap.java),[BSTMap](./datastruct/map/BSTMap.java) | [LinkedListMap](./datastruct/map/LinkedListMap.py),[BSTMap](./datastruct/map/BSTMap.py) |
 | [优先队列和堆](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/heap) | [MaxHeap](./datastruct/heap/MaxHeap.java),[PriorityQueue](./datastruct/heap/PriorityQueue.java) | [MaxHeap](./datastruct/heap/MaxHeap.py),[PriorityQueue](./datastruct/heap/PriorityQueue.py) |
 | [线段树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/segment_tree) | [SegmentTree](./datastruct/segment_tree/SegmentTree.java)    | [SegmentTree](./datastruct/segment_tree/SegmentTree.py)      |
+| [Trie 字典树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/trie) | [Trie](./datastruct/trie/Trie.java)                          | [Trie](./datastruct/trie/Trie.py)                            |
 
