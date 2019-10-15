@@ -16,5 +16,6 @@
 | [Trie 字典树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/trie) | [Trie](./datastruct/trie/Trie.java)                          | [Trie](./datastruct/trie/Trie.py)                            |
 | [并查集](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/union_find) | [UnionFind](./datastruct/trie/UnionFind.java)                | [UnionFind](./datastruct/trie/UnionFind.py)                  |
 | [AVL](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/avl) | [AVL](./datastruct/avl/AVL.java)                             | [AVL](./datastruct/avl/AVL.py)                               |
-| [红黑树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/red_black_tree) | [红黑树](./datastruct/red_black_tree/RBTree.java)            | [红黑树](./datastruct/red_black_tree/RBTree.py)              |
+| [红黑树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/red_black_tree) | [RBTree](./datastruct/red_black_tree/RBTree.java)            | [RBTree](./datastruct/red_black_tree/RBTree.py)              |
+| [哈希表](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/hash_table) | [HashTable](./datastruct/hash_table/HashTable.java)          | [HashTable](./datastruct/hash_table/HashTable.py)            |
 
