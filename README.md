@@ -29,11 +29,15 @@
 * [冒泡排序](./algorithm/sort/bubble_sort.py)
 * [归并排序](./algorithm/sort/merge_sort.py)
 * [快速排序](./algorithm/sort/quick_sort.py)
-* [三路快速排序](./algorithm/sort/quick_sort_three_way.py)
+* [三路快速排序](./algorithm/sort/quick_sort_three_ways.py)
 
 
 ​    </details>
 
-
-
 ## 剑指offer
+
+<details>
+    <summary>面试题1～10</summary>
+- [面试题2：实现Singleton模式](./solution/offer/no_2 _singleton.py)
+
+</details>

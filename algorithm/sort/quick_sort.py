@@ -25,38 +25,56 @@ def __quick_sort(arr, left, right):
         return
 
     pos = __partition(arr, left, right)
-    __quick_sort(arr, left, pos)
+    __quick_sort(arr, left, pos - 1)
     __quick_sort(arr, pos + 1, right)
 
 def __partition(arr, left, right):
     '''
-        分割数组返回分割点 pos，满足 [left, pos-1] < pos,[gt, i) > pos, i 为当前考察点
+        分割数组返回分割点
     '''
     swap_idx = random.randint(left, right)
     arr[swap_idx], arr[left] = arr[left], arr[swap_idx]
     val = arr[left]
 
-    gt = left + 1
+    # [left + 1, lt) <= val,(gt, right] >= val
+    gt = right
+    lt = left + 1
 
-    for i in range(left + 1, right + 1):
-        if arr[i] < val:
-            arr[gt], arr[i] = arr[i], arr[gt]
-            gt += 1
+    while True:
+        while lt <= right and arr[lt] < val: 
+            lt += 1
+        while gt >= left and arr[gt] > val:  
+            gt -= 1
+        if lt > gt: break
+        
+        arr[lt],arr[gt] = arr[gt], arr[lt]
+
+        lt += 1
+        gt -= 1
     
-    arr[left], arr[gt-1] = arr[gt-1], arr[left]
+    arr[left], arr[gt] = arr[gt], arr[left]
 
-    return gt - 1
+    return gt
 
 if __name__ == "__main__":
 
     nums = 100000
 
+    print('Random samples test: size=%d' % nums)
     arr = sh.generate_int_array(nums, 0, nums)
     copy_arr = arr.copy()
     sh.sort_cost('quick_sort', quick_sort,arr)
     sh.sort_cost('merge_sort', ms.merge_sort,copy_arr)
 
+    swap = 100
+    print('Nearly ordered samples test: size=%d swap=%d' % (nums,swap))
     arr = sh.generate_nearly_ordered_array(nums,100)
+    copy_arr = arr.copy()
+    sh.sort_cost('quick_sort', quick_sort,copy_arr)
+    sh.sort_cost('merge_sort', ms.merge_sort,arr)
+
+    print('Duplicate samples test: size=%d' % nums)
+    arr = sh.generate_int_array(nums, 0, 10)
     copy_arr = arr.copy()
     sh.sort_cost('quick_sort', quick_sort,copy_arr)
     sh.sort_cost('merge_sort', ms.merge_sort,arr)
