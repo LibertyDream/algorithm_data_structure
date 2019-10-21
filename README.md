@@ -11,7 +11,7 @@
 | [二分搜索树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/BST) | [BST](./datastruct/BST/BST.java)                             | [BST](./datastruct/BST/BST.py)                               |
 | [集合](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/set) | [BSTSet](./datastruct/set/BSTSet.java),[LinkedListSet](./datastruct/set/LinkedListSet.java),[AVLSet](./datastruct/set/AVLSet.java) | [BSTSet](./datastruct/set/BSTSet.py),[LinkedListSet](./datastruct/set/LinkedListSet.py),[AVLSet](./datastruct/set/AVLSet.py) |
 | [映射](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/map) | [LinkedListMap](./datastruct/map/LinkedListMap.java),[BSTMap](./datastruct/map/BSTMap.java),[AVLMap](./datastruct/map/AVLMap.java) | [LinkedListMap](./datastruct/map/LinkedListMap.py),[BSTMap](./datastruct/map/BSTMap.py),[AVLMap](./datastruct/map/AVLMap.py) |
-| [优先队列和堆](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/heap) | [MaxHeap](./datastruct/heap/MaxHeap.java),[PriorityQueue](./datastruct/heap/PriorityQueue.java) | [MaxHeap](./datastruct/heap/MaxHeap.py),[PriorityQueue](./datastruct/heap/PriorityQueue.py) |
+| [优先队列和堆](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/heap) | [MaxHeap](./datastruct/heap/MaxHeap.java),[PriorityQueue](./datastruct/heap/PriorityQueue.java) | [MaxHeap](./datastruct/heap/MaxHeap.py),[PriorityQueue](./datastruct/heap/PriorityQueue.py),[IndexMaxHeap](./datastruct/heap/index_max_heap.py) |
 | [线段树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/segment_tree) | [SegmentTree](./datastruct/segment_tree/SegmentTree.java)    | [SegmentTree](./datastruct/segment_tree/SegmentTree.py)      |
 | [Trie 字典树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/trie) | [Trie](./datastruct/trie/Trie.java)                          | [Trie](./datastruct/trie/Trie.py)                            |
 | [并查集](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/union_find) | [UnionFind](./datastruct/trie/UnionFind.java)                | [UnionFind](./datastruct/trie/UnionFind.py)                  |
@@ -23,6 +23,15 @@
 
 <details>
     <summary>排序</summary>
+| 名称     | 时间复杂度 | 空间复杂度 | 原地排序 | 稳定排序 |
+| -------- | ---------- | ---------- | -------- | -------- |
+| 选择排序 | O(n^2)     | O(1)       | √        | √        |
+| 插入排序 | O(n^2)     | O(1)       | √        | √        |
+| 冒泡排序 | O(n^2)     | O(1)       | √        | √        |
+| 归并排序 | O(nlogn)   | O(n)       | ×        | √        |
+| 快速排序 | O(nlogn)   | O(logn)    | √        | ×        |
+| 堆排序   | O(nlogn)   | O(1)       | √        | ×        |
+
 
 * [选择排序](./algorithm/sort/selection_sort.py)
 * [插入排序](./algorithm/sort/insertion_sort.py)
@@ -30,14 +39,17 @@
 * [归并排序](./algorithm/sort/merge_sort.py)
 * [快速排序](./algorithm/sort/quick_sort.py)
 * [三路快速排序](./algorithm/sort/quick_sort_three_ways.py)
+* [堆排序](./algorithm/sort/heap_sort.py)
 
 
 ​    </details>
 
-## 剑指offer
+### 剑指offer
 
 <details>
     <summary>面试题1～10</summary>
+
 - [面试题2：实现Singleton模式](./solution/offer/no_2 _singleton.py)
 
 </details>
+
