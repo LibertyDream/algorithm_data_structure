@@ -18,7 +18,7 @@ class LoopQueue(Queue):
 
     def enqueue(self, ele):
 
-        if self.__tail + 1 == self.__front:
+        if (self.__tail + 1) % len(self.__data) == self.__front:
             self.__resize((len(self.__data) - 1) * 2)
 
         self.__data[self.__tail] = ele

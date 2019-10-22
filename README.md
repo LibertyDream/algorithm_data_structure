@@ -23,15 +23,6 @@
 
 <details>
     <summary>排序</summary>
-| 名称     | 时间复杂度 | 空间复杂度 | 原地排序 | 稳定排序 |
-| -------- | ---------- | ---------- | -------- | -------- |
-| 选择排序 | O(n^2)     | O(1)       | √        | √        |
-| 插入排序 | O(n^2)     | O(1)       | √        | √        |
-| 冒泡排序 | O(n^2)     | O(1)       | √        | √        |
-| 归并排序 | O(nlogn)   | O(n)       | ×        | √        |
-| 快速排序 | O(nlogn)   | O(logn)    | √        | ×        |
-| 堆排序   | O(nlogn)   | O(1)       | √        | ×        |
-
 
 * [选择排序](./algorithm/sort/selection_sort.py)
 * [插入排序](./algorithm/sort/insertion_sort.py)
@@ -41,8 +32,26 @@
 * [三路快速排序](./algorithm/sort/quick_sort_three_ways.py)
 * [堆排序](./algorithm/sort/heap_sort.py)
 
+| 名称     | 时间复杂度 | 空间复杂度 | 原地排序 | 稳定排序 |
+| -------- | ---------- | ---------- | -------- | -------- |
+| 选择排序 | O(n^2)     | O(1)       | √        | √        |
+| 插入排序 | O(n^2)     | O(1)       | √        | √        |
+| 冒泡排序 | O(n^2)     | O(1)       | √        | √        |
+| 归并排序 | O(nlogn)   | O(n)       | ×        | √        |
+| 快速排序 | O(nlogn)   | O(logn)    | √        | ×        |
+| 堆排序   | O(nlogn)   | O(1)       | √        | ×        |
 
 ​    </details>
+
+<details>
+    <summary>图论</summary>
+
+- [稀疏图](./algorithm/graph_theroy/sparse_graph.py)
+- [稠密图](./algorithm/graph_theroy/dense_graph.py)
+- [深度优先遍历与连通分量](./algorithm/graph_theroy/depth_first.py)
+- [深度优先遍历与路径](./algorithm/graph_theroy/path.py)
+
+</details>
 
 ### 剑指offer
 
@@ -52,4 +61,3 @@
 - [面试题2：实现Singleton模式](./solution/offer/no_2 _singleton.py)
 
 </details>
-

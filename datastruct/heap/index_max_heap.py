@@ -34,7 +34,7 @@ class IndexMaxHeap(object):
         self.__data[index] = ele
         self.__indexes[self.__size] = index
         self.__reversed[index] = self.__size
-        self.__shift_up(index)
+        self.__shift_up(self.__size)
         self.__size += 1
 
     def peek(self):
@@ -47,7 +47,7 @@ class IndexMaxHeap(object):
             return None
 
         ret = self.__data[self.__indexes[0]]
-        self.__indexes[0] = self.__indexes[self.__size - 1]
+        self.__indexes[0], self.__indexes[self.__size - 1] = self.__indexes[self.__size - 1], self.__indexes[0]
         self.__reversed[self.__indexes[self.__size - 1]] = None
         self.__reversed[self.__indexes[0]] = 0
         self.__size -= 1
@@ -113,8 +113,8 @@ class IndexMaxHeap(object):
 
         ret = self.__indexes[0]
 
-        self.__indexes[0] = self.__indexes[self.__size - 1]
-        self.__reversed[self.__size - 1] = None
+        self.__indexes[0], self.__indexes[self.__size - 1] = self.__indexes[self.__size - 1], self.__indexes[0]
+        self.__reversed[self.__indexes[self.__size - 1]] = None
         self.__reversed[self.__indexes[0]] = 0
         self.__size -= 1
         self.__shift_down(0)
