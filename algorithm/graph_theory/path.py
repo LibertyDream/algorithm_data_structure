@@ -19,7 +19,8 @@ data = [[13,13],
 class Path(object):
 
     def __init__(self, graph, orgin):
-
+        '''深度优先遍历寻找路径'''
+        
         self.__graph = graph
         self.__orgin = orgin
         self.__visited = [False] * graph.get_node_nums()

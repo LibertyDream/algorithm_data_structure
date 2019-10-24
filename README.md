@@ -46,10 +46,11 @@
 <details>
     <summary>图论</summary>
 
-- [稀疏图](./algorithm/graph_theroy/sparse_graph.py)
-- [稠密图](./algorithm/graph_theroy/dense_graph.py)
-- [深度优先遍历与连通分量](./algorithm/graph_theroy/depth_first.py)
-- [深度优先遍历与路径](./algorithm/graph_theroy/path.py)
+- [稀疏图](./algorithm/graph_theory/sparse_graph.py)
+- [稠密图](./algorithm/graph_theory/dense_graph.py)
+- [深度优先遍历与连通分量](./algorithm/graph_theory/depth_first.py)
+- [深度优先遍历与路径](./algorithm/graph_theory/path.py)
+- [广度优先遍历与最短路径](./algorithm/graph_theory/path.py)
 
 </details>
 
