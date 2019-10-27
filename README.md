@@ -50,7 +50,14 @@
 - [稠密图](./algorithm/graph_theory/dense_graph.py)
 - [深度优先遍历与连通分量](./algorithm/graph_theory/depth_first.py)
 - [深度优先遍历与路径](./algorithm/graph_theory/path.py)
-- [广度优先遍历与最短路径](./algorithm/graph_theory/path.py)
+- [广度优先遍历与最短路径](./algorithm/graph_theory/breadth_first.py)
+- [带权稀疏图](./algorithm/graph_theory/weighted_sparse_graph.py)
+- [带权稠密图](./algorithm/graph_theory/weighted_dense_graph.py)
+- [懒惰 Prim 与最小生成树](./algorithm/graph_theory/lazy_prim.py)
+- [Prim](./algorithm/graph_theory/prim.py)
+- [Kruskal 与最小生成树](./algorithm/graph_theory/kruskal.py)
+- [Dijkstra与最短路径](./algorithm/graph_theory/dijkstra.py)
+- [Bellman_Ford与最短路径](./algorithm/graph_theory/bellman_ford.py)
 
 </details>
 

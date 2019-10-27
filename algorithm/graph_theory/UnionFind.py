@@ -1,13 +1,11 @@
-from UF import UF
-
-class UnionFind(UF):
+class UnionFind(object):
 
     def __init__(self, size:int) -> None:
         self.parent = [None] * size
         self.rank = [None] * size
         for i in range(size):
             self.parent[i] = i
-            self.rank[i] = 1
+            self.rank[i] = 0
     
     def get_size(self) -> int:
         return len(self.parent)
@@ -30,7 +28,7 @@ class UnionFind(UF):
     
     # 判断 p，q 是否在一个集合内
     def is_connected(self, p:int, q:int) -> bool:
-        return self.parent[p] == self.parent[q]
+        return self.__find(p) == self.__find(q)
 
     # 合并 p，q 所在集合
     def union(self, p:int, q:int) -> None:
@@ -48,3 +46,6 @@ class UnionFind(UF):
         else:
             self.parent[q_root] = p_root
             self.rank[p_root] += 1
+
+    def __str__(self):
+        return str(self.parent)+'\n'+str(self.rank)+'\n'
