@@ -19,7 +19,7 @@
 | [红黑树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/red_black_tree) | [RBTree](./datastruct/red_black_tree/RBTree.java)            | [RBTree](./datastruct/red_black_tree/RBTree.py)              |
 | [哈希表](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/hash_table) | [HashTable](./datastruct/hash_table/HashTable.java)          | [HashTable](./datastruct/hash_table/HashTable.py)            |
 
-### 算法
+## 算法
 
 <details>
     <summary>排序</summary>
@@ -61,11 +61,21 @@
 
 </details>
 
+## 编程习题
+
 ### 剑指offer
 
 <details>
     <summary>面试题1～10</summary>
 
-- [面试题2：实现Singleton模式](./solution/offer/no_2 _singleton.py)
+- [面试题2：实现Singleton模式](./solution/design_mode/no_2_singleton.py)
+- [面试题3：找出数组中重复的数字](./solution/array/no_3_duplicate_num.py)
+- [面试题4：二维数组中的查找](./solution/array/no_4_search_in_two_dim_array.py)
+- [面试题5：替换空格](./solution/string/no_5_replace_blank.py)
+- [面试题6：从尾到头打印链表](./solution/linked_list/no_6_print_list_reversely.py)
+- [面试题7：重建二又树](./solution/tree/no_7_construct_tree.py)
+- [面试题8：二又树的下一个节点](./solution/tree/no_8_next_node.py)
+- [面试题9：用两个栈实现队列](./solution/queue/no_9_two_stack_to_a_queue.py)
+- [面试题10：斐波那契数列](./solution/recur_loop/no_10_fibonacci.py)
 
 </details>
