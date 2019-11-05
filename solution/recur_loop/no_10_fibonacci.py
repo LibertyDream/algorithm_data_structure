@@ -5,7 +5,7 @@
 
 def Fibonacci(n):
 
-    if n < 0 or n is None:
+    if n < 1 or n is None:
         return
     
     goal = 0
@@ -15,7 +15,7 @@ def Fibonacci(n):
         goal = f_1
     else:
         for i in range(2, n):
-            goal += f_1 + f_2
+            goal = f_1 + f_2
             f_1 = f_2
             f_2 = goal
     
@@ -23,5 +23,5 @@ def Fibonacci(n):
 
 if __name__ == "__main__":
 
-    print
-    print(Fibonacci(3))
+    # 0 1 1 2 3 5 8 13 21
+    print(Fibonacci(6))

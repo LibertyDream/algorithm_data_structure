@@ -66,16 +66,38 @@
 ### 剑指offer
 
 <details>
-    <summary>面试题1～10</summary>
+    <summary>知识基础</summary>
+
 
 - [面试题2：实现Singleton模式](./solution/design_mode/no_2_singleton.py)
 - [面试题3：找出数组中重复的数字](./solution/array/no_3_duplicate_num.py)
+- [面试题3-1：不修改数组找出重复的数字](./solution/array/no_3_2_duplicate_num_no_change.py)
 - [面试题4：二维数组中的查找](./solution/array/no_4_search_in_two_dim_array.py)
 - [面试题5：替换空格](./solution/string/no_5_replace_blank.py)
 - [面试题6：从尾到头打印链表](./solution/linked_list/no_6_print_list_reversely.py)
 - [面试题7：重建二又树](./solution/tree/no_7_construct_tree.py)
 - [面试题8：二又树的下一个节点](./solution/tree/no_8_next_node.py)
 - [面试题9：用两个栈实现队列](./solution/queue/no_9_two_stack_to_a_queue.py)
+- [面试题9-1：用两个队列实现栈](./solution/stack/no_9_1_two_queue_to_stack.py)
 - [面试题10：斐波那契数列](./solution/recur_loop/no_10_fibonacci.py)
+- [面试题10-1：青蛙跳台阶问题](./solution/recur_loop/no_10_1_frog_step.py)
+- [面试题11：旋转数组的最小数字](./solution/recur_loop/no_11_rotate_array.py)
+- [面试题12：矩阵中的路径](./solution/recur_loop/no_12_path_in_matrix.py)
+- [面试题13：机器人的运动范围](./solution/recur_loop/no_13_step_counts.py)
+- [面试题14：剪绳子](./solution/dynamic_greedy/no_14_cut_rope.py)
+- [面试题15-1：二进制中1的个数](./solution/bit_map/no_15_number_of_1.py)
+- [面试题15-2：2的整数次幂判断](./solution/bit_map/no_15_2_integer_power.py)
+
+</details>
+
+<details>
+    <summary>高质量代码：规范，完整，鲁棒</summary>
+
+- [面试题16：数值的整数次方](./solution/bit_map/no_16_power.py)
+- [面试题17：打印从1到最大的n位数](./solution/string/no_17_print_1_to_max_n.py)
+- [面试题18-1：删除链表的节点](./solution/linked_list/no_18_1_delete_node_O1.py)
+- [面试题18-2：删除链表中重复的节点](./solution/linked_list/no_18_2_delete_duplicate.py)
+- [面试题19：正则表达式匹配](./solution/string/no_19_regular_match.py)
+- [面试题20：表示数值的字符串](./solution/string/no_20_num_string.py)
 
 </details>
