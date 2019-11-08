@@ -67,8 +67,6 @@
 
 <details>
     <summary>知识基础</summary>
-
-
 - [面试题2：实现Singleton模式](./solution/design_mode/no_2_singleton.py)
 - [面试题3：找出数组中重复的数字](./solution/array/no_3_duplicate_num.py)
 - [面试题3-1：不修改数组找出重复的数字](./solution/array/no_3_2_duplicate_num_no_change.py)
@@ -99,5 +97,23 @@
 - [面试题18-2：删除链表中重复的节点](./solution/linked_list/no_18_2_delete_duplicate.py)
 - [面试题19：正则表达式匹配](./solution/string/no_19_regular_match.py)
 - [面试题20：表示数值的字符串](./solution/string/no_20_num_string.py)
+- [面试题21：调整数组顺序使奇数位于偶数前面](./solution/array/no_21_swap_ord_even.py)
+- [面试题22：链表中倒数第k个节点](./solution/linked_list/no_22_Kth_to_tail.py)
+- [面试题23：链表中环的入口节点](./solution/linked_list/no_23_entry_of_loop.py)
+- [面试题24：反转链表](./solution/linked_list/no_24_reverse_linked_list.py)
+- [面试题25：合并两个排序的链表](./solution/linked_list/no_25_merge_sorted_list.py)
+- [面试题26：树的子结构](./solution/tree/no_26_same_structure.py)
+
+</details>
+
+<details>
+    <summary>解决问题的思路：画图、举例</summary>
+
+- [面试题27：二叉树的镜像](./solution/tree/no_27_mirror_tree.py)
+- [面试题28：对称的二叉树](./solution/tree/no_28_symmetrical_tree.py)
+- [面试题29：顺时针打印矩阵](./solution/array/no_29_print_array_clockwise.py)
+- [面试题30：包含min函数的栈](./solution/stack/no_30_stack_with_min.py)
+
+- [面试题31：栈的压入、弹出序列](./solution/stack/no_31_push_pop_queue.py)
 
 </details>
