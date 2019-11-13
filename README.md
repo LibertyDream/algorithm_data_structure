@@ -67,6 +67,7 @@
 
 <details>
     <summary>知识基础</summary>
+
 - [面试题2：实现Singleton模式](./solution/design_mode/no_2_singleton.py)
 - [面试题3：找出数组中重复的数字](./solution/array/no_3_duplicate_num.py)
 - [面试题3-1：不修改数组找出重复的数字](./solution/array/no_3_2_duplicate_num_no_change.py)
@@ -107,13 +108,29 @@
 </details>
 
 <details>
-    <summary>解决问题的思路：画图、举例</summary>
+    <summary>解决问题的思路：画图、举例、分解子问题</summary>
 
 - [面试题27：二叉树的镜像](./solution/tree/no_27_mirror_tree.py)
 - [面试题28：对称的二叉树](./solution/tree/no_28_symmetrical_tree.py)
 - [面试题29：顺时针打印矩阵](./solution/array/no_29_print_array_clockwise.py)
 - [面试题30：包含min函数的栈](./solution/stack/no_30_stack_with_min.py)
-
 - [面试题31：栈的压入、弹出序列](./solution/stack/no_31_push_pop_queue.py)
+- [面试题32-1：从上到下打印二叉树](./solution/tree/no_32_1_up_to_down_print_oneline.py)
+- [面试题32-2: 分行从上到下打印二叉树](./solution/tree/no_32_2_up_to_down_print_ln.py)
+- [面试题32-3: 之字形打印二叉树](./solution/tree/no_32_3_Z_type_print.py)
+- [面试题33：二分搜索树的后序遍历序列](./solution/tree/no_33_verify_BST_post_order_seq.py)
+- [面试题34：二叉树中和为某一值的路径](./solution/tree/no_34_find_path.py)
+- [面试题35：复杂链表的复制](./solution/linked_list/no_35_clone_complex_list.py)
+- [面试题36：二叉搜索树与双向链表](./solution/tree/no_36_bst_to_linked_list.py)
+- [面试题37：序列化二叉树](./solution/tree/no_37_ser_deser_bst.py)
+- [面试题38：字符串的排列](./solution/string/no_38_permutation.py)
+
+</details>
+
+<details>
+    <summary>时间和空间效率</summary>
+
+- [面试题39：数组中出现次数超过一半的数字](./solution/array/no_39_more_than_half.py)
+- [面试题40：最小的k个数](./solution/heap/no_40_least_nums.py)
 
 </details>
