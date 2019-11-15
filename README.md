@@ -132,5 +132,18 @@
 
 - [面试题39：数组中出现次数超过一半的数字](./solution/array/no_39_more_than_half.py)
 - [面试题40：最小的k个数](./solution/heap/no_40_least_nums.py)
+- [面试题41：数据流中的中位数](./solution/heap/no_41_get_median.py)
+- [面试题42：连续子数组的最大和](./solution/array/no_42_max_sum_subset.py)
+- [面试题43：1~n整数中1出现的次数](./solution/string/no_43_nums_of_1.py)
+- [面试题44：数字序列中某一位的数字](./solution/string/no_44_digit_at_index.py)
+- [面试题45：把数组排成最小的数](./solution/string/no_45_min_combine.py)
+- [面试题46：把数字翻译成字符串](./solution/string/no_46_num_translation.py)
+- [面试题47：礼物的最大价值](./solution/dynamic_greedy/no_47_max_gift_value.py)
+- [面试题48：最长不含重复字符的子字符串](./solution/dynamic_greedy/no_48_longest_substring.py)
+- [面试题49：丑数](./solution/array/no_49_ugly_num.py)
+- [面试题50-1：字符串中第一个只出现一次的字符](./solution/set_hash/no_50_1_first_appeared_once.py)
+- [面试题50-2：字符流中第一个只出现一次的字符](./solution/set_hash/no_50_2_first_appeared_once_flow.py)
+- [面试题51：数组中的逆序对](./solution/array/no_51_inverse_pairs.py)
+- [面试题52：两个链表的第一个公共节点](./solution/linked_list/no_52_first_common_node.py)
 
 </details>
