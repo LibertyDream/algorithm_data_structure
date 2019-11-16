@@ -68,7 +68,7 @@
 <details>
     <summary>知识基础</summary>
 
-- [面试题2：实现Singleton模式](./solution/design_mode/no_2_singleton.py)
+- [面试题2：实现Singleton模式](./solution/thinking/no_2_singleton.py)
 - [面试题3：找出数组中重复的数字](./solution/array/no_3_duplicate_num.py)
 - [面试题3-1：不修改数组找出重复的数字](./solution/array/no_3_2_duplicate_num_no_change.py)
 - [面试题4：二维数组中的查找](./solution/array/no_4_search_in_two_dim_array.py)
@@ -145,5 +145,38 @@
 - [面试题50-2：字符流中第一个只出现一次的字符](./solution/set_hash/no_50_2_first_appeared_once_flow.py)
 - [面试题51：数组中的逆序对](./solution/array/no_51_inverse_pairs.py)
 - [面试题52：两个链表的第一个公共节点](./solution/linked_list/no_52_first_common_node.py)
+
+</details>
+
+<details>
+    <summary>知识迁移能力</summary>
+
+- [面试题53-1：在排序数组中查找数字](./solution/array/no_53_1_times_in_sorted_array.py)
+- [面试题53-2：0~n-1中缺失的数字](./solution/array/no_53_2_missing_num.py)
+- [面试题53-3:数组中数值和下标相等的元素](./solution/array/no_53_3_same_as_index.py)
+- [面试题54：二叉搜索树的第k大节点](./solution/tree/no_54_Kth_large_node.py)
+- [面试题55-1：二叉树的深度](./solution/tree/no_55_1_tree_deepth.py)
+- [面试题55-2：平衡二叉树](./solution/tree/no_55_2_is_avl.py)
+- [面试题56-1:数组中只出现一次的两个数字](./solution/bit_map/no_56_1_appeared_once.py)
+- [面试题56-2: 数组中唯一只出现一次的数字](./solution/bit_map/no_56_2_only_one.py)
+- [面试题57-1：和为s的两个数字](./solution/array/no_57_1_two_sum.py)
+- [面试题57-2：和为s的连续正数序列](./solution/array/no_57_2_squence_sum.py)
+- [面试题58-1：翻转单词顺序](./solution/string/no_58_1_reverse_string.py)
+- [面试题58-2：左旋转字符串](./solution/string/no_58_2_left_rotate.py)
+- [面试题59-1：滑动窗口的最大值](./solution/queue/no_59_1_max_of_window.py)
+- [面试题59-2：队列的最大值](./solution/queue/no_59_2_queue_with_max_method.py)
+
+</details>
+
+<details>
+    <summary>抽象建模能力</summary>
+
+- [面试题60：n个骰子的点数](./solution/dynamic_greedy/no_60_dice_probabilty.py)
+- [面试题61：扑克牌中的顺子](./solution/array/no_61_poker.py)
+- [面试题62：圆圈中最后剩下的数字](./solution/dynamic_greedy/no_62_last_num.py)
+- [面试题63：股票的最大利润](./solution/dynamic_greedy/no_63_stock.py)
+- [面试题64：求1+2+…+n](./solution/thinking/no_64_sum_n.py)
+- [面试题65：不用加减乘除做加法](./solution/thinking/no_65_limited_add_method.py)
+- [面试题66：构建乘积数组](./solution/thinking/no_66_multiply_array.py)
 
 </details>
