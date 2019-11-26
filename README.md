@@ -14,7 +14,7 @@
 | [优先队列和堆](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/heap) | [MaxHeap](./datastruct/heap/MaxHeap.java),[PriorityQueue](./datastruct/heap/PriorityQueue.java) | [MaxHeap](./datastruct/heap/MaxHeap.py),[PriorityQueue](./datastruct/heap/PriorityQueue.py),[IndexMaxHeap](./datastruct/heap/index_max_heap.py) |
 | [线段树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/segment_tree) | [SegmentTree](./datastruct/segment_tree/SegmentTree.java)    | [SegmentTree](./datastruct/segment_tree/SegmentTree.py)      |
 | [Trie 字典树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/trie) | [Trie](./datastruct/trie/Trie.java)                          | [Trie](./datastruct/trie/Trie.py)                            |
-| [并查集](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/union_find) | [UnionFind](./datastruct/trie/UnionFind.java)                | [UnionFind](./datastruct/trie/UnionFind.py)                  |
+| [并查集](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/union_find) | [UnionFind](./datastruct/union_find/UnionFind.java)          | [UnionFind](./datastruct/union_find/UnionFind.py)            |
 | [AVL](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/avl) | [AVL](./datastruct/avl/AVL.java)                             | [AVL](./datastruct/avl/AVL.py)                               |
 | [红黑树](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/red_black_tree) | [RBTree](./datastruct/red_black_tree/RBTree.java)            | [RBTree](./datastruct/red_black_tree/RBTree.py)              |
 | [哈希表](https://github.com/LibertyDream/algorithm_data_structure/tree/master/datastruct/hash_table) | [HashTable](./datastruct/hash_table/HashTable.java)          | [HashTable](./datastruct/hash_table/HashTable.py)            |
@@ -74,8 +74,8 @@
 - [面试题4：二维数组中的查找](./solution/array/no_4_search_in_two_dim_array.py)
 - [面试题5：替换空格](./solution/string/no_5_replace_blank.py)
 - [面试题6：从尾到头打印链表](./solution/linked_list/no_6_print_list_reversely.py)
-- [面试题7：重建二又树](./solution/tree/no_7_construct_tree.py)
-- [面试题8：二又树的下一个节点](./solution/tree/no_8_next_node.py)
+- [面试题7：重建二叉树](./solution/tree/no_7_construct_tree.py)
+- [面试题8：二叉树的下一个节点](./solution/tree/no_8_next_node.py)
 - [面试题9：用两个栈实现队列](./solution/queue/no_9_two_stack_to_a_queue.py)
 - [面试题9-1：用两个队列实现栈](./solution/stack/no_9_1_two_queue_to_stack.py)
 - [面试题10：斐波那契数列](./solution/recur_loop/no_10_fibonacci.py)
