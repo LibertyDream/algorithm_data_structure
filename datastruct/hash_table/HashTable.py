@@ -39,8 +39,6 @@ class HashTable(object):
             self.__capacity_index -= 1
             self.__resize(self.__capacity[self.__capacity_index])
         return ret
-        
-        return self.__hash_table[self.__hash(key)].pop(key)
 
     def put(self,key,value):
         get_map = self.__hash_table[self.__hash(key)]
